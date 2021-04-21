@@ -1,18 +1,17 @@
 import axios from 'axios';
-//import actions from './contact-actions';
 import {
+  fetchContactRequrest,
+  fetchContactSuccess,
+  fetchContactError,
   addContactRequrest,
   addContactSuccess,
   addContactError,
   deleteContactRequrest,
   deleteContactSuccess,
   deleteContactError,
-  fetchContactRequrest,
-  fetchContactSuccess,
-  fetchContactError,
 } from './contact-actions';
 
-axios.defaults.baseURL = 'http://localhost:4040';
+//axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
 
 /*const asyncActionCreator = args => dispatch => {
   // можно диспачить http запросы
@@ -34,7 +33,7 @@ const fetchContact = () => dispatch => {
   axios
     .get('/contacts')
     .then(({ data }) => dispatch(fetchContactSuccess(data)))
-    .catch(error => dispatch(fetchContactError(error)));
+    .catch(error => dispatch(fetchContactError(error.message)));
 };
 
 const addContact = (name, number) => dispatch => {
@@ -51,7 +50,7 @@ const addContact = (name, number) => dispatch => {
       //dispatch({ type: 'contacts/addContactSuccess', paload: data }),
       ({ data }) => dispatch(addContactSuccess(data)),
     )
-    .catch(error => dispatch(addContactError(error)));
+    .catch(error => dispatch(addContactError(error.message)));
 };
 
 const deleteContact = id => dispatch => {
@@ -64,7 +63,7 @@ const deleteContact = id => dispatch => {
     .then(() => {
       dispatch(deleteContactSuccess(id));
     })
-    .catch(error => dispatch(deleteContactError(error)));
+    .catch(error => dispatch(deleteContactError(error.message)));
 };
 
 const contactsOperations = {
