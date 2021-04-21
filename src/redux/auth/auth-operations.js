@@ -23,6 +23,7 @@ const register = credentials => async dispatch => {
 
   try {
     const response = await axios.post('/users/signup', credentials);
+
     console.log(response);
 
     token.set(response.data.token);
@@ -32,7 +33,7 @@ const register = credentials => async dispatch => {
   }
 };
 // axsios.post('/');
-const login = credentials => async dispatch => {
+const logIn = credentials => async dispatch => {
   dispatch(authActions.loginRequest());
   try {
     const response = await axios.post('/users/login', credentials);
@@ -79,4 +80,4 @@ const getCurrentUser = () => async (dispatch, getState) => {
 };
 
 // eslint-disable-next-line
-export default { register, login, logOut, getCurrentUser };
+export default { register, logIn, logOut, getCurrentUser };

@@ -74,7 +74,7 @@ class RegisterPage extends Component {
             />
           </label>
 
-          <button type="submit">Зарегистрироваться</button>
+          <button type="submit">Sign in</button>
         </form>
       </div>
     );
