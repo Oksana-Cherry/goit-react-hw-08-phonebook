@@ -36,7 +36,7 @@ class LoginPage extends Component {
 
     return (
       <div>
-        <h1>Страница логина</h1>
+        <h1>Login page</h1>
 
         <form
           onSubmit={this.handleSubmit}
@@ -44,7 +44,7 @@ class LoginPage extends Component {
           autoComplete="off"
         >
           <label style={styles.label}>
-            Почта
+            Email
             <input
               type="email"
               name="email"
@@ -54,7 +54,7 @@ class LoginPage extends Component {
           </label>
 
           <label style={styles.label}>
-            Пароль
+            Password
             <input
               type="password"
               name="password"

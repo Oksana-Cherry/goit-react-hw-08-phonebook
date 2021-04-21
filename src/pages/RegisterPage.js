@@ -45,7 +45,7 @@ class RegisterPage extends Component {
           autoComplete="off"
         >
           <label style={styles.label}>
-            Имя
+            Name
             <input
               type="text"
               name="name"
@@ -55,7 +55,7 @@ class RegisterPage extends Component {
           </label>
 
           <label style={styles.label}>
-            Почта
+            Email
             <input
               type="email"
               name="email"
@@ -65,7 +65,7 @@ class RegisterPage extends Component {
           </label>
 
           <label style={styles.label}>
-            Пароль
+            Password
             <input
               type="password"
               name="password"
