@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import routes from '../../routes';
 //import styles from './AuthNav.module.css';
+const { register, login } = routes;
 
 const styles = {
   link: {
@@ -17,7 +19,7 @@ const styles = {
 const AuthNav = () => (
   <div>
     <NavLink
-      to="/register"
+      to={register}
       exact
       style={styles.link}
       activeStyle={styles.activeLink}
@@ -25,7 +27,7 @@ const AuthNav = () => (
       Authorization
     </NavLink>
     <NavLink
-      to="/login"
+      to={login}
       exact
       style={styles.link}
       activeStyle={styles.activeLink}

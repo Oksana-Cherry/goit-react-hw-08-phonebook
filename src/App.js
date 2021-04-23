@@ -13,12 +13,13 @@ import { connect } from 'react-redux';
 import { authOperations } from './redux/auth';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
-
+import routes from './routes';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));
 
+const { home, contacts, register, login } = routes;
 class App extends Component {
   componentDidMount() {
     this.props.onGetCurretnUser();
@@ -31,23 +32,23 @@ class App extends Component {
 
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
-            <PublicRoute exact path="/" component={HomePage} />
+            <PublicRoute exact path={home} component={HomePage} />
             <PublicRoute
-              path="/register"
+              path={register}
               restricted
-              redirectTo="/contacts"
+              redirectTo={contacts}
               component={RegisterPage}
             />
             <PublicRoute
-              path="/login"
+              path={login}
               restricted
-              redirectTo="/contacts"
+              redirectTo={contacts}
               component={LoginPage}
             />
             <PrivateRoute
-              path="/contacts"
+              path={contacts}
               component={ContactsPage}
-              redirectTo="/login"
+              redirectTo={login}
             />
           </Switch>
         </Suspense>
