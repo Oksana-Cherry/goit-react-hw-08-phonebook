@@ -16,7 +16,7 @@ const ContactListItem = ({ id, name, number, onDelete }) => {
 };
 
 const ContactList = ({ contacts, onDelete }) => {
-  console.log(' contacts', contacts);
+  //console.log('contacts', contacts);
   if (contacts.length === 0) return null;
   return (
     <ul className={styles.List}>

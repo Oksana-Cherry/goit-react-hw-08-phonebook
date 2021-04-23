@@ -8,11 +8,13 @@ import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { contactsSelectors, contactsOperations } from '../redux/contacts';
 
-/*const barStyles = {
-  display: 'flex',
-  alignItems: 'flex-end',
-  marginBottom: 20,
-};*/
+const styles = {
+  container_contact: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    marginBottom: 20,
+  },
+};
 
 class ContactsPage extends Component {
   componentDidMount() {
@@ -21,25 +23,28 @@ class ContactsPage extends Component {
 
   render() {
     return (
-      <Container>
-        <h1>Phonebook</h1>
+      <Container style={styles.container_contact}>
+        <div>
+          <h1>Phonebook</h1>
 
-        <ContactForm />
+          <ContactForm />
+        </div>
+        <div>
+          <h2>Contacts</h2>
 
-        <h2>Contacts</h2>
+          <Filter />
 
-        <Filter />
-
-        <ContactList />
-        {this.props.isLoading && (
-          <Loader
-            type="ThreeDots"
-            color="#303f9f"
-            height={80}
-            width={80}
-            className="Loader"
-          />
-        )}
+          <ContactList />
+          {this.props.isLoading && (
+            <Loader
+              type="ThreeDots"
+              color="#303f9f"
+              height={80}
+              width={80}
+              className="Loader"
+            />
+          )}
+        </div>
         {this.props.error && <h1>No result found!</h1>}
       </Container>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
+import Button from '@material-ui/core/Button';
 
 const styles = {
   form: {
@@ -63,7 +64,9 @@ class LoginPage extends Component {
             />
           </label>
 
-          <button type="submit">Войти</button>
+          <Button type="submit" variant="contained" color="primary">
+            Acess{' '}
+          </Button>
         </form>
       </div>
     );

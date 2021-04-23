@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
+import Button from '@material-ui/core/Button';
 const styles = {
   form: {
     width: 320,
@@ -37,7 +37,7 @@ class RegisterPage extends Component {
 
     return (
       <div>
-        <h1>Страница регистрации</h1>
+        <h1>Authorization</h1>
 
         <form
           onSubmit={this.handleSubmit}
@@ -74,7 +74,9 @@ class RegisterPage extends Component {
             />
           </label>
 
-          <button type="submit">Sign in</button>
+          <Button type="submit" variant="contained" color="primary">
+            Sign in
+          </Button>
         </form>
       </div>
     );

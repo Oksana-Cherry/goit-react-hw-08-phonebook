@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+//import styles from './AuthNav.module.css';
 
 const styles = {
   link: {
@@ -10,10 +11,9 @@ const styles = {
     color: '#2A363B',
   },
   activeLink: {
-    color: '#303f9f',
+    color: '#2b32b2',
   },
 };
-
 const AuthNav = () => (
   <div>
     <NavLink

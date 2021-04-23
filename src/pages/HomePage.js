@@ -17,8 +17,10 @@ const styles = {
 const HomePage = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>
-      Phonebook <span role="img" aria-label="Иконка приветствия"></span>
+      Phonebook {/*<span role="img" aria-label="Иконка приветствия"></span>*/}
     </h1>
+    {/* <img className="" src="" alt="" />
+    {/*нужно доделать*/}
   </div>
 );
 

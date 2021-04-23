@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { authSelectors, authOperations } from '../../redux/auth';
 import defaultAvatar from './default-avatar.png';
+import Button from '@material-ui/core/Button';
 
 const styles = {
   container: {
@@ -22,9 +22,14 @@ const UserMenu = ({ avatar, name, onLogout }) => (
   <div style={styles.container}>
     <img src={avatar} alt="" width="32" style={styles.avatar} />
     <span style={styles.name}>Welcome, {name}</span>
-    <button type="button" onClick={onLogout}>
+    <Button
+      type="button"
+      variant="contained"
+      color="primary"
+      onClick={onLogout}
+    >
       Logout
-    </button>
+    </Button>
   </div>
 );
 

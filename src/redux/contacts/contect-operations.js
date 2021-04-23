@@ -57,8 +57,6 @@ const deleteContact = id => dispatch => {
   dispatch(deleteContactRequrest());
 
   axios
-    /*.delete(`/contacts/${id}`)
-    .then(() => dispatch(deleteContactSuccess(id)))*/
     .delete(`/contacts/${id}`)
     .then(() => {
       dispatch(deleteContactSuccess(id));

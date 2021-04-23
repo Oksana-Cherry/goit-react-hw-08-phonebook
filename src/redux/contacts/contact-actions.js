@@ -20,14 +20,6 @@ export const deleteContactSuccess = createAction(
 );
 export const deleteContactError = createAction('contacts/deleteContactError');
 
-/*const addContact = createAction('contacts/add', (name, number) => ({
-  payload: {
-    name,
-    number,
-    id: uuid(),
-  },
-}));*/
-
 export const changeFilterName = createAction('contacts/filter');
 
 /*
