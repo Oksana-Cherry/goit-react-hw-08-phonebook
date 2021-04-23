@@ -16,7 +16,9 @@ const styles = {
     color: '#2b32b2',
   },
 };
+
 const { home, contacts } = routes;
+
 const Navigation = ({ isAuthenticated }) => (
   <nav>
     <NavLink

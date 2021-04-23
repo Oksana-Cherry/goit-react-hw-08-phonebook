@@ -44,6 +44,7 @@ class App extends Component {
               component={ContactsPage}
               redirectTo={login}
             />
+            <PublicRoute component={HomePage} />
           </Switch>
         </Suspense>
       </Container>

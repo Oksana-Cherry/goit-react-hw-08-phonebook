@@ -1,8 +1,0 @@
-[build]
-  publish = "build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-© 2021 GitHub, Inc.
