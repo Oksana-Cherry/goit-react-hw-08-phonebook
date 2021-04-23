@@ -34,6 +34,7 @@ class App extends Component {
               component={RegisterPage}
             />
             <PublicRoute
+              exact
               path={login}
               restricted
               redirectTo={contacts}
