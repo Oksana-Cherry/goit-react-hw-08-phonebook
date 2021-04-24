@@ -2,17 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import Button from '@material-ui/core/Button';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import styles from './Page.module.css';
 
 class LoginPage extends Component {
   state = {
@@ -41,10 +31,10 @@ class LoginPage extends Component {
 
         <form
           onSubmit={this.handleSubmit}
-          style={styles.form}
+          className={styles.form}
           autoComplete="off"
         >
-          <label style={styles.label}>
+          <label className={styles.label}>
             Email
             <input
               type="email"
@@ -54,7 +44,7 @@ class LoginPage extends Component {
             />
           </label>
 
-          <label style={styles.label}>
+          <label className={styles.label}>
             Password
             <input
               type="password"

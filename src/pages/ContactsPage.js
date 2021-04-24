@@ -7,14 +7,7 @@ import Filter from '../components/Filter';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { contactsSelectors, contactsOperations } from '../redux/contacts';
-
-const styles = {
-  container_contact: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    marginBottom: 20,
-  },
-};
+import styles from './Page.module.css';
 
 class ContactsPage extends Component {
   componentDidMount() {
@@ -23,7 +16,7 @@ class ContactsPage extends Component {
 
   render() {
     return (
-      <Container style={styles.container_contact}>
+      <Container className={styles.container_contact}>
         <div>
           <h1>Phonebook</h1>
 
